@@ -20,7 +20,7 @@ public class StrConsumerListener {
         LOGGER.info("LOG ::: Receive message {}", message);
     }
 
-    @StrConsumerCustomListener(groupId = "group-2")
+    @StrConsumerCustomListener(groupId = "group-2", containerFactory = "validMessageContainerFactory")
     public void history(String message){
         LOGGER.info("HISTORY ::: Receive message {}", message);
     }
